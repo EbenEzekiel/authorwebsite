@@ -1,0 +1,57 @@
+.headings {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#author-picture {
+    display: block;
+    margin: 20px auto;
+    width: 450px;
+    height: 550px;
+    border-radius: 50%;
+    /* border: 1.7px solid gold; */
+    box-shadow: 0 0 5px gold;
+}
+
+#vision-mission-statement p {
+    text-align: center;
+    margin: 20px auto;
+    color: #333;
+    max-width: 750px;
+}
+
+#best-sellers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#best-sellers img {
+    width: 150px;
+    border: 1.5px solid gold;
+    border-radius: 5px;
+}
+
+#identity {
+    display: flex;
+    margin: 20px 0 5rem 0;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#identity img {
+    display: block;
+    width: 150px;
+    height: 150px;
+
+}
+
+@media (max-width: 768px) {
+    #best-sellers, #identity {
+        flex-direction: column;
+        align-items: center;
+    }
+}
