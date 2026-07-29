@@ -19,36 +19,7 @@ import About from './pages/About';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-// ------------------------------------------------------------------
-// DATA: Book object (iterated over in BookShelf)
-// ------------------------------------------------------------------
 
-
-// ------------------------------------------------------------------
-// COMPONENTS
-// ------------------------------------------------------------------
-
-// Navigation
-
-
-// Hero Section
-
-
-// Book Shelf
-
-
-// About Section
-
-
-// Contact Section
-
-
-// Footer
-
-
-// ------------------------------------------------------------------
-// MAIN APP
-// ------------------------------------------------------------------
 function App() {
   return (
     <BrowserRouter>
