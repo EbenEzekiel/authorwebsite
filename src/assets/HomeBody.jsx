@@ -16,7 +16,7 @@ import './HomeBody.css';
 export default function HomeBody () {
     
     return (
-        <div>
+        <div style={{padding: '10px'}}>
             <div className='headings'>
                 <h1>Hi! I am Dr. Abiola Fashina (esq.). Welcome to my Author's Website</h1>
             </div>
