@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Chiamaka · Planted Locally, Spread Globally</title>
+  <!-- Font Awesome (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Lato & Playfair Display for elegance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #fcf9f5;
+      color: #2e2b2b;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header / nav */
+    header {
+      background: #1e3a3f;
+      padding: 18px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #f1e4d1;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .logo span {
+      color: #d8b78c;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #e6dccb;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 1.05rem;
+      letter-spacing: 0.3px;
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover {
+      color: #f5e7d3;
+      border-bottom-color: #d8b78c;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(135deg, #1e3a3f 0%, #2b4f55 100%);
+      color: #f5efe6;
+      padding: 4rem 0 3rem;
+      margin-bottom: 2.5rem;
+      border-radius: 0 0 40px 40px;
+    }
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1 1 300px;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .hero-text h1 small {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #d8b78c;
+      margin-top: 0.3rem;
+      font-style: italic;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      max-width: 500px;
+      margin-bottom: 1.8rem;
+      opacity: 0.9;
+    }
+    .hero-text .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      border-left: 4px solid #d8b78c;
+      padding-left: 1rem;
+      color: #eedbc2;
+    }
+    .hero-image {
+      flex: 0 0 280px;
+      text-align: center;
+    }
+    .hero-image img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 30px 30px 30px 0;
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.4);
+      border: 4px solid #d8b78c;
+      transition: 0.3s;
+      background: #2b4f55; /* fallback while loading */
+    }
+    .hero-image img:hover {
+      transform: scale(1.02);
+      border-color: #f1e4d1;
+    }
+
+    /* section headings */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #1e3a3f;
+      margin: 2.5rem 0 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 60px;
+      height: 3px;
+      background: #d8b78c;
+    }
+    .section-sub {
+      color: #4a5f5f;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    /* book shelf (cards) */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 1rem;
+    }
+    .book-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.8rem 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      text-align: center;
+      transition: 0.25s;
+      border: 1px solid #ede6db;
+    }
+    .book-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+      border-color: #d8b78c;
+    }
+    .book-card i {
+      font-size: 3.8rem;
+      color: #1e3a3f;
+      background: #f1eadd;
+      padding: 1rem;
+      border-radius: 60px;
+      margin-bottom: 1rem;
+      width: 80px;
+    }
+    .book-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+      color: #1e3a3f;
+    }
+    .book-card .sub {
+      font-weight: 300;
+      color: #5d4e3b;
+      font-size: 0.95rem;
+    }
+    .book-card .desc {
+      font-size: 0.95rem;
+      color: #4b4a47;
+      margin-top: 0.5rem;
+    }
+
+    /* about page (achievements + social) */
+    .about-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      background: #fffcf8;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #ece3d7;
+    }
+    .about-text {
+      flex: 2 1 300px;
+    }
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #1e3a3f;
+      margin-bottom: 0.3rem;
+    }
+    .about-text .role {
+      color: #7a6a56;
+      font-style: italic;
+      margin-bottom: 1.2rem;
+    }
+    .about-text p {
+      margin-bottom: 1.2rem;
+    }
+    .achievements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      margin: 1.5rem 0 1.8rem;
+      background: #f6f0e8;
+      padding: 1.2rem 1.8rem;
+      border-radius: 40px 12px 40px 12px;
+    }
+    .achievements li {
+      list-style: none;
+      font-weight: 400;
+      color: #1e3a3f;
+    }
+    .achievements li i {
+      color: #b28b5c;
+      margin-right: 8px;
+      width: 1.4rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .social-links a {
+      background: #1e3a3f;
+      color: #f1e4d1;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 400;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+    .social-links a:hover {
+      background: #d8b78c;
+      color: #1e3a3f;
+      border-color: #1e3a3f;
+    }
+    .about-avatar {
+      flex: 0 0 200px;
+      text-align: center;
+    }
+    .about-avatar img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 40px 0 40px 0;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      border: 4px solid #d8b78c;
+      background: #d2c1ad;
+    }
+
+    /* contact */
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      background: #fffcf8;
+      padding: 2rem 2rem 2.5rem;
+      border-radius: 24px;
+      border: 1px solid #ece3d7;
+      margin: 1.5rem 0 3rem;
+    }
+    .contact-info {
+      flex: 1 1 220px;
+    }
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #1e3a3f;
+    }
+    .contact-info p {
+      margin: 0.8rem 0;
+    }
+    .contact-info i {
+      color: #b28b5c;
+      width: 1.8rem;
+    }
+    .contact-form {
+      flex: 2 1 300px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin: 8px 0 16px;
+      border: 1px solid #d6cdc0;
+      border-radius: 30px;
+      font-family: 'Lato', sans-serif;
+      background: #fefcf9;
+      transition: 0.2s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none;
+      border-color: #b28b5c;
+      box-shadow: 0 0 0 3px rgba(184, 139, 92, 0.2);
+    }
+    .contact-form textarea {
+      border-radius: 20px;
+      min-height: 120px;
+      resize: vertical;
+    }
+    .btn {
+      background: #1e3a3f;
+      color: white;
+      border: none;
+      padding: 12px 34px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: 0.25s;
+      border: 1px solid #1e3a3f;
+    }
+    .btn:hover {
+      background: #d8b78c;
+      color: #1e3a3f;
+      border-color: #b28b5c;
+    }
+
+    footer {
+      background: #1e3a3f;
+      color: #cfc3b0;
+      padding: 2rem 0;
+      margin-top: 2.5rem;
+      text-align: center;
+      border-radius: 40px 40px 0 0;
+    }
+    footer small {
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    footer .footer-quote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #d8b78c;
+      margin-bottom: 0.4rem;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .hero-grid { flex-direction: column-reverse; text-align: center; }
+      .hero-text p { margin-left: auto; margin-right: auto; }
+      .hero-text .tagline { border-left: none; border-top: 3px solid #d8b78c; padding-top: 0.6rem; }
+      .about-wrap { flex-direction: column-reverse; align-items: center; text-align: center; }
+      .achievements { justify-content: center; }
+      .social-links { justify-content: center; }
+      .contact-grid { flex-direction: column; }
+      .nav-wrapper { flex-direction: column; gap: 0.6rem; }
+      .nav-links { gap: 1rem; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- header -->
+<header>
+  <div class="container nav-wrapper">
+    <div class="logo">Dr. Chiamaka <span>·</span> <span>Planted & Global</span></div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#books">Book Shelf</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO (home) -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Planted Locally, <br><small>Spreading Globally</small></h1>
+      <p>Dr. Chiamaka · author, minister, and advocate for churches &amp; ministers using social media to expand their reach.</p>
+      <div class="tagline">“Visibility is not vanity — it’s stewardship.”</div>
+    </div>
+    <div class="hero-image">
+      <!-- hero image from drive link (first link) -->
+      <img src="./hero.jpeg" alt="Dr. Chiamaka hero image - global ministry" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- BOOK SHELF -->
+  <section id="books">
+    <h2 class="section-title">📚 Book Shelf</h2>
+    <p class="section-sub">Practical, spirit-led resources for ministers and churches ready to embrace digital mission.</p>
+    <div class="book-grid">
+      <div class="book-card">
+        <i class="fas fa-church"></i>
+        <h3>The Digital Pulpit</h3>
+        <div class="sub">2024 · Ministry &amp; Media</div>
+        <div class="desc">How to preach beyond walls and reach nations through social platforms.</div>
+      </div>
+      <div class="book-card">
+        <i class="fas fa-globe-africa"></i>
+        <h3>Planted, Not Buried</h3>
+        <div class="sub">2023 · Church Growth</div>
+        <div class="desc">Local roots, global fruits — a blueprint for the connected church.</div>
+      </div>
+      <div class="book-card">
+        <i class="fas fa-hashtag"></i>
+        <h3>#KingdomInfluence</h3>
+        <div class="sub">2025 · Social Strategy</div>
+        <div class="desc">Practical social media tactics for ministers and Christian leaders.</div>
+      </div>
+      <div class="book-card">
+        <i class="fas fa-praying-hands"></i>
+        <h3>Pray &amp; Post</h3>
+        <div class="sub">2022 · Devotional</div>
+        <div class="desc">Daily prayers for digital missionaries and online ministry.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + achievements + social -->
+  <section id="about">
+    <h2 class="section-title">About Dr. Chiamaka</h2>
+    <div class="about-wrap">
+      <div class="about-text">
+        <h2>Chiamaka O. Ebere, D.Min.</h2>
+        <div class="role">Minister · Author · Digital Mission Advocate</div>
+        <p>Dr. Chiamaka is a pastor, author, and speaker who believes that “ministers can be planted locally but spread globally.” She equips churches and leaders to use social media as a tool for kingdom advancement, without losing the heart of local community.</p>
+        <p>With over a decade of ministry experience, she has trained hundreds of pastors across Africa, Europe, and the Americas on digital presence, content creation, and authentic online engagement.</p>
+        
+        <ul class="achievements">
+          <li><i class="fas fa-award"></i> Best Christian Author 2024 (Africa)</li>
+          <li><i class="fas fa-users"></i> Trained 1,200+ ministers in 14 countries</li>
+          <li><i class="fas fa-book-open"></i> Bestselling author of 4 books on ministry &amp; media</li>
+          <li><i class="fas fa-microphone-alt"></i> Keynote speaker at global church conferences</li>
+        </ul>
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+          <a href="#"><i class="fab fa-twitter"></i> X</a>
+          <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #4f5e5a;"><i class="fas fa-globe"></i> “Visibility is not vanity — it’s stewardship.”</p>
+      </div>
+      <div class="about-avatar">
+        <!-- author picture from second drive link -->
+        <img src="./personal picture.jpeg" alt="Dr. Chiamaka - author photo" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Let’s Connect</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Reach out</h3>
+        <p><i class="fas fa-envelope"></i> chiamaka@globalministry.org</p>
+        <p><i class="fas fa-phone-alt"></i> +234 800 123 4567</p>
+        <p><i class="fas fa-map-pin"></i> Lagos, Nigeria · global reach</p>
+        <p style="margin-top: 1.5rem; font-style: italic; color: #3d4f4a;">“I’d love to hear from you — whether you’re a minister, a church leader, or someone ready to take your message further.”</p>
+      </div>
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Email address" required>
+          <input type="text" placeholder="Church or ministry (optional)">
+          <textarea placeholder="Your message ..."></textarea>
+          <button type="submit" class="btn">Send message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="footer-quote">“Planted locally, spreading globally — for such a time as this.”</div>
+    <small>© 2026 Dr. Chiamaka · All rights reserved · Built with faith &amp; purpose</small>
+  </div>
+</footer>
+
+<!-- smooth scroll for nav (optional) -->
+<script>
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
