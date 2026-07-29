@@ -67,7 +67,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="container nav-container">
         <div className="logo">
-          Dr. Abiola Fashina esq. <span className="logo-divider">·</span> <span className="logo-sub">Planted & Global</span>
+          Dr. Abiola Fashina (esq). <span className="logo-divider">·</span> <span className="logo-sub">Planted & Global</span>
         </div>
         <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
           ☰
@@ -104,7 +104,7 @@ const Hero = () => {
             <span className="hero-subtitle">Spreading Globally</span>
           </h1>
           <p className="hero-description">
-            Dr. Abiola Fashina esq. · author, minister, and advocate for churches &amp; ministers using social media to expand their reach.
+            Dr. Abiola Fashina (esq). · author, minister, and advocate for churches &amp; ministers using social media to expand their reach.
           </p>
           <div className="hero-tagline">
             “Visibility is not vanity — it’s stewardship.”
@@ -167,13 +167,13 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <h2 className="section-title">About Dr. Abiola Fashina esq.</h2>
+        <h2 className="section-title">About Dr. Abiola Fashina (esq).</h2>
         <div className="about-container">
           <div className="about-content">
-            <h3 className="about-name">Abiola Fashina esq.</h3>
+            <h3 className="about-name">Abiola Fashina (esq).</h3>
             <p className="about-role">Minister · Author · Digital Mission Advocate</p>
             <p className="about-text">
-              Dr. Abiola Fashina esq. is an Evangelist, author, and speaker who believes that “ministers can be planted locally but spread globally.” She equips churches and leaders to use social media as a tool for kingdom advancement, without losing the heart of local community.
+              Dr. Abiola Fashina (esq). is an Evangelist, author, and speaker who believes that “ministers can be planted locally but spread globally.” She equips churches and leaders to use social media as a tool for kingdom advancement, without losing the heart of local community.
             </p>
             <p className="about-text">
               With over a decade of ministry experience, she has trained hundreds of pastors across Africa, Europe, and the Americas on digital presence, content creation, and authentic online engagement.
@@ -199,7 +199,7 @@ const About = () => {
           <div className="about-image-wrapper">
             <img 
               src={author_picture} 
-              alt="Dr. Abiola Fashina esq. - author" 
+              alt="Dr. Abiola Fashina (esq). - author" 
               className="about-image"
             />
           </div>
@@ -246,7 +246,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-quote">“Planted locally, spreading globally — for such a time as this.”</div>
-        <small className="footer-text">© 2026 Dr. Abiola Fashina esq. · All rights reserved · Built with faith &amp; purpose</small>
+        <small className="footer-text">© 2026 Dr. Abiola Fashina (esq). · All rights reserved · Built with faith &amp; purpose</small>
       </div>
     </footer>
   );
