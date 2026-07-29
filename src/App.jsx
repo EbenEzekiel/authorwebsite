@@ -67,7 +67,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="container nav-container">
         <div className="logo">
-          Dr. Chiamaka <span className="logo-divider">·</span> <span className="logo-sub">Planted & Global</span>
+          Dr. Abiola Fashina esq. <span className="logo-divider">·</span> <span className="logo-sub">Planted & Global</span>
         </div>
         <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
           ☰
@@ -104,7 +104,7 @@ const Hero = () => {
             <span className="hero-subtitle">Spreading Globally</span>
           </h1>
           <p className="hero-description">
-            Dr. Chiamaka · author, minister, and advocate for churches &amp; ministers using social media to expand their reach.
+            Dr. Abiola Fashina esq. · author, minister, and advocate for churches &amp; ministers using social media to expand their reach.
           </p>
           <div className="hero-tagline">
             “Visibility is not vanity — it’s stewardship.”
@@ -167,13 +167,13 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <h2 className="section-title">About Dr. Chiamaka</h2>
+        <h2 className="section-title">About Dr. Abiola Fashina esq.</h2>
         <div className="about-container">
           <div className="about-content">
-            <h3 className="about-name">Chiamaka O. Ebere, D.Min.</h3>
+            <h3 className="about-name">Abiola Fashina esq.</h3>
             <p className="about-role">Minister · Author · Digital Mission Advocate</p>
             <p className="about-text">
-              Dr. Chiamaka is a pastor, author, and speaker who believes that “ministers can be planted locally but spread globally.” She equips churches and leaders to use social media as a tool for kingdom advancement, without losing the heart of local community.
+              Dr. Abiola Fashina esq. is an Evangelist, author, and speaker who believes that “ministers can be planted locally but spread globally.” She equips churches and leaders to use social media as a tool for kingdom advancement, without losing the heart of local community.
             </p>
             <p className="about-text">
               With over a decade of ministry experience, she has trained hundreds of pastors across Africa, Europe, and the Americas on digital presence, content creation, and authentic online engagement.
@@ -199,7 +199,7 @@ const About = () => {
           <div className="about-image-wrapper">
             <img 
               src={author_picture} 
-              alt="Dr. Chiamaka - author" 
+              alt="Dr. Abiola Fashina esq. - author" 
               className="about-image"
             />
           </div>
@@ -218,9 +218,9 @@ const Contact = () => {
         <div className="contact-container">
           <div className="contact-info">
             <h3 className="contact-heading">Reach out</h3>
-            <p className="contact-detail"><FaEnvelope className="contact-icon" /> chiamaka@globalministry.org</p>
-            <p className="contact-detail"><FaPhoneAlt className="contact-icon" /> +234 800 123 4567</p>
-            <p className="contact-detail"><FaMapPin className="contact-icon" /> Lagos, Nigeria · global reach</p>
+            <p className="contact-detail"><FaEnvelope className="contact-icon" /> myfaithtvnetwork@gmail.com</p>
+            <p className="contact-detail"><FaPhoneAlt className="contact-icon" /> +1 (678) 886-5117</p>
+            <p className="contact-detail"><FaMapPin className="contact-icon" /> Atlanta, Georgia, USA · global reach</p>
             <p className="contact-message">“I'd love to hear from you — whether you're a minister, a church leader, or someone ready to take your message further.”</p>
           </div>
           <div className="contact-form-wrapper">
@@ -246,7 +246,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-quote">“Planted locally, spreading globally — for such a time as this.”</div>
-        <small className="footer-text">© 2026 Dr. Chiamaka · All rights reserved · Built with faith &amp; purpose</small>
+        <small className="footer-text">© 2026 Dr. Abiola Fashina esq. · All rights reserved · Built with faith &amp; purpose</small>
       </div>
     </footer>
   );
