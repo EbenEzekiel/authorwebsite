@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
      <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">Author Name<span class="dot">.</span></a>
+      <a href="#" class="nav-logo">Dr. Abiola Fashina (esq.)<span class="dot">.</span></a>
       <nav className="nav-links">
       {
         navItems.map(item => (

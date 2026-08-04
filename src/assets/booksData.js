@@ -6,7 +6,7 @@ const booksData = [
   {
     id: 1,
     title: "Social Media Guide for Ministry & Global Evangelism",
-    src: '/src/assets/images/social_media_guidefor_ministry_&_global_evangelism.jpeg',
+    src: '/images/social_media_guidefor_ministry_&_global_evangelism.jpeg',
     year: "2026",
     category: "Ministry & Media",
     description: "Social Media Guide For Ministry & Global Evangelism is a book for pastors, \
@@ -28,7 +28,7 @@ const booksData = [
   {
     id: 2,
     title: "Your Church YouTube Channel",
-    src: '/src/assets/images/your_church_youtube_channel.jpeg',
+    src: '/images/your_church_youtube_channel.jpeg',
     year: "2026",
     category: "Church Growth",
     description: "Does your church have a YouTube channel? Do you know to set up your \
@@ -50,7 +50,7 @@ const booksData = [
   {
     id: 3,
     title: "He Left Me With the Kids",
-    src: '/src/assets/images/he_left_me_with_the_kids.jpeg',
+    src: '/images/he_left_me_with_the_kids.jpeg',
     year: "2026",
     category: "Family",
     description: "He didn't just leave the relationship. He left the children, the\
@@ -68,7 +68,7 @@ const booksData = [
   {
     id: 4,
     title: "Blogging ",
-    src: '/src/assets/images/blogging.jpeg',
+    src: '/images/blogging.jpeg',
     year: "2026",
     category: "Media",
     description: "This book is what you would call the \“A-B-C of Blogging\” or the “Bible of \
@@ -92,7 +92,7 @@ const booksData = [
   {
     id: 5,
     title: "LIFE CAN BREAK YOU. FAITH CAN SAVE YOU. ",
-    src: '/src/assets/images/life_can_break_you_faith_can_save_you.jpeg',
+    src: '/images/life_can_break_you_faith_can_save_you.jpeg',
     year: "2026",
     category: "Faith",
     description: "We all face moments when life feels overwhelming—when waves \
