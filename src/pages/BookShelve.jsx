@@ -3,12 +3,14 @@ import booksData from "../assets/booksData.js";
 import Navbar from '../assets/Navbar';
 import Footer from '../assets/Footer';
 
+import './BookShelve.css';
+
 export default function BookShelf () {
   return (
     <main className='app'>
       <Navbar />
       <section id="books" className="books-section m">
-        <h2 className="section-title">📚 Book Shelf</h2>
+        <h1 className="section-title">My Book 📚 Shelf</h1>
         {/* <div className="container">
           <h2 className="section-title">📚 Book Shelf</h2>
           <p className="section-subtitle">
@@ -25,7 +27,22 @@ export default function BookShelf () {
             ))}
           </div>
         </div> */}
-        <h1>Under Construction</h1>
+        {/* <h1>Under Construction</h1> */}
+        <h3>CONSTRUCTION IN PROGRESS...</h3>
+        {
+          booksData.map(book => (
+            <div key={book.id} className="books">
+              <br/>
+              <p id='title'><b>Title: </b>{book.title}</p>
+              <p><b>Category: </b>{book.category}</p>
+              <p><b>Publication Year: </b>{book.year}</p>
+              <p><b>Book overview: </b></p>
+              <img src={book.src} alt={`Image of ${book.title}`} />
+              <p className='descriptions'>{book.description}</p>
+              <hr className='divider'/>
+            </div>
+          ))
+        }
       </section>
       <Footer />
     </main>

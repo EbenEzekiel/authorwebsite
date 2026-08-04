@@ -44,19 +44,27 @@ export default function HomeBody () {
             <div id='identity'>
                 <div>
                     <img src={Growth} alt="I stand for growth" />
-                    Growth
+                    <p>
+                        Growth
+                    </p>
                 </div>
                 <div>
                     <img src={Integrity} alt="I stand for integrity" />
-                    Integrity
+                    <p>
+                        Integrity
+                    </p>
                 </div>
                 <div>
                     <img src={Visibility} alt="I stand for visibility" />
-                    Visibility
+                    <p>
+                        Visibility 
+                    </p>
                 </div>
                 <div>
                     <img src={Partnership} alt="I stand for partnership" />
-                    Partnership
+                    <p>
+                        Partnership
+                    </p>
                 </div>
             </div>
             <div className='headings'>
