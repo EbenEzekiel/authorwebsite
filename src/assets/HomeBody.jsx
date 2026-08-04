@@ -18,7 +18,7 @@ export default function HomeBody () {
     return (
         <div style={{padding: '10px'}}>
             <div className='headings'>
-                <h1>Hi! I am Dr. Abiola Fashina (esq.). Welcome to my Author's Website</h1>
+                <h1>Dr. Abiola Fashina (esq.)</h1>
             </div>
             <div>
                 <img id='author-picture' src={AuthorPicture} alt="Picture of Dr. Abiola Fashina (esq.)" />
