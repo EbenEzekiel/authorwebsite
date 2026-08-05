@@ -181,8 +181,12 @@
 
   .hero-stats {
     justify-content: center;
+    /* justify-content: left; */
   }
 
+  .hero-media img {
+    width: 97%;
+  }
   .nav-links {
     display: none; /* Hide navigation items on smaller screens for simplicity */
   }
