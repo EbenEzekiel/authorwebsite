@@ -26,5 +26,6 @@ dist-ssr
 
 del.html
 del.css
+del*
 
 *keep*

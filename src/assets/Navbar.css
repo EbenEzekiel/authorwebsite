@@ -1,5 +1,17 @@
  /*2. NAVBAR
    ========================================================================== */
+  #nav-mobile {
+    display: none;
+    padding: 0 50px;
+    font-size: 2rem;
+    text-align: right;
+    /* background-color: lightblue; */
+  }
+
+  #nav-mobile>span:hover {
+    cursor: pointer;
+  }
+  
 .navbar {
   background-color: var(--bg-white);
   border-bottom: 1px solid var(--border-light);
@@ -32,6 +44,7 @@
 .nav-links {
   display: flex;
   gap: 2rem;
+  /* transition: 0.3 0 display; */
 }
 
 .nav-links a {
@@ -100,4 +113,27 @@
   background-color: var(--green);
   color: var(--bg-white);
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  #nav-mobile {
+    display: block;
+  }
+
+  #nav-mobile-show {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #nav-mobile-show a {
+    display: inline;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: var(--transition);
+  }
+
 }
