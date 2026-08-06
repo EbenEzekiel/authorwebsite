@@ -21,6 +21,7 @@
 }
 
 .nav-container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.25rem 2rem;
@@ -116,12 +117,19 @@
 }
 
 @media (max-width: 768px) {
+  .nav-logo {
+    font-size: 1.3rem;
+  }
   .nav-links {
     display: none;
   }
 
   #nav-mobile {
     display: block;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    /* background-color: blue; */
   }
 
   #nav-mobile-show {
@@ -133,7 +141,13 @@
     display: inline;
     text-decoration: none;
     color: var(--text-dark);
+    background-color: var(--bg-white);
+    padding: 7px 20px;
     transition: var(--transition);
+  }
+
+  .nav-cta-mobile {
+    display: none;
   }
 
 }

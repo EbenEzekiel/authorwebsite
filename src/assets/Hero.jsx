@@ -6,6 +6,7 @@ export default function Hero () {
     // <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
+      <a href="#latest-book" class="mobile-test ">Get the Latest Book</a>
       
       {/* <!-- Left Content Column --> */}
       <div class="hero-content">

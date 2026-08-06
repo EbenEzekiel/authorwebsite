@@ -33,18 +33,7 @@ export default function Navbar() {
      <header class="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">Dr. Abiola Fashina (esq)<span class="dot">.</span></a>
-      <nav className="nav-links">
-      {
-        navItems.map(item => (
-          <Link key={item.name} to={item.href} className={item.class}> {item.name} </Link>
-        ))
-      }
-      </nav>
-      
-      <a href="#latest-book" class="btn btn-red nav-cta">Get the Latest Book</a>
-    </div>
-
-    <div id='nav-mobile' >
+      <div id='nav-mobile' >
       { 
         !isOpen ? 
         <span onClick={()=>openTray()}> ☰ </span> :
@@ -58,6 +47,31 @@ export default function Navbar() {
         </nav>
       }
       </div>
+      <nav className="nav-links">
+      {
+        navItems.map(item => (
+          <Link key={item.name} to={item.href} className={item.class}> {item.name} </Link>
+        ))
+      }
+      </nav>
+      
+      <a href="#latest-book" class="btn btn-red nav-cta nav-cta-mobile">Get the Latest Book</a>
+    </div>
+
+    {/* <div id='nav-mobile' >
+      { 
+        !isOpen ? 
+        <span onClick={()=>openTray()}> ☰ </span> :
+        <nav id={isOpen ? "nav-mobile-show":""}>
+            <span onClick={()=>openTray()}> X </span>
+            {
+              navItems.map(item => (
+                <Link key={item.name} to={item.href} className={item.class}> {item.name} </Link>
+              ))
+            }
+        </nav>
+      }
+      </div> */}
   </header>
   );
 };
